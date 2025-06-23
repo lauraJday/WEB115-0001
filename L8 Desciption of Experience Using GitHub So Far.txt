@@ -1,0 +1,5 @@
+My experience using GitHub has been fairly straight forward. 
+We were required to create an account and repositories in other classes.
+In those classes we were required to use the command line, which was 
+a lot more difficult. When I start looking for an internship I plan to 
+share some of the programming I've been working on. 

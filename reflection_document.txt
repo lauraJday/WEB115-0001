@@ -1,0 +1,35 @@
+Laura Day
+WEB115-0001
+Final Project
+Reflection Document
+
+
+This project was very helpful because it allowed us to create a web page 
+that is well-organized and productive for most users. The detailed 
+instructions were useful but sometimes challenging, as they required 
+careful attention to meet all requirements.
+
+To make the large amount of code easier to manage, I moved the style 
+elements into a separate CSS file. This approach felt cleaner and more 
+organized. Later, I combined the HTML and CSS files for simplicity.
+
+At first, I struggled with the date requirement, but once I realized that 
+'Date' is a built-in JavaScript object, it became easier to understand 
+how to use it. I worked with methods such as .getFullYear(), which returns 
+the four-digit year; .getMonth(), which returns the month (0–11); and 
+.getDate(), which returns the day of the month. Properly formatting the 
+code also helped a lot.
+
+To generate a unique ID for each user, I created another Date object. 
+Using Date.now() gave me the current date in milliseconds. I then used 
+Math.random() to produce a decimal number between 0 and 1 and multiplied 
+it by 1000 to get a whole number.
+
+Overall, the practical nature of building the website and practicing with 
+common JavaScript objects were the most helpful and interesting parts of 
+this project.
+
+
+  
+
+   

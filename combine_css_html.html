@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskFlow Solutions - Task Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px auto;
+      max-width: 600px;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #0001;
+      justify-content: space-between;
+      align-items: center;
+    }
+    form input[type="text"] {
+      flex: 2 1 220px;
+      padding: 6px;
+    }
+    form select {
+      flex: 1 1 100px;
+      padding: 6px;
+    }
+    form label {
+      flex: 1 1 90px;
+      font-size: 0.95em;
+    }
+    form button {
+      flex: 1 1 110px;
+      padding: 7px 0;
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #005fa3;
+    }
+    #taskmanager {
+      margin-top: 28px;
+    }
+    .task-item {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 14px;
+      margin-bottom: 12px;
+      border-radius: 7px;
+      box-shadow: 0 1px 6px #0002;
+      position: relative;
+      transition: box-shadow 0.2s;
+      color: #000;
+    }
+    .task-item:hover {
+      box-shadow: 0 2px 15px #0003;
+    }
+    .task-info {
+      flex: 1;
+    }
+    .task-date {
+      font-size: 0.85em;
+      color: #888;
+      margin-left: 10px;
+    }
+    /* Only highlight important tasks in red */
+    .important.priority-high {
+      background: #f8d7da; /* Light Red */
+      border-left: 5px solid #8B0000; /* Dark Red */
+    }
+    /* Do not highlight medium or low, only give border if important */
+    .important.priority-medium {
+      border-left: 5px solid #8B0000; /* Dark Red */
+    }
+    .important.priority-low {
+      border-left: 5px solid #8B0000; /* Dark Red */
+    }
+    /* No highlighting or colored borders for non-important tasks */
+    .completed .task-info {
+      text-decoration: line-through;
+      color: #888;
+    }
+    .delete-btn {
+      background: #e74c3c;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      padding: 6px 12px;
+      cursor: pointer;
+      margin-left: 18px;
+      transition: background 0.2s;
+    }
+    .delete-btn:hover {
+      background: #c0392b;
+    }
+    @media (max-width: 500px) {
+      .task-item { flex-direction: column; align-items: flex-start; }
+      .delete-btn { margin: 12px 0 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  <form id="taskForm" autocomplete="off">
+    <input type="text" id="taskName" placeholder="Enter task name..." required>
+    <select id="taskPriority" required>
+      <option value="">Priority</option>
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+    <label>
+      <input type="checkbox" id="taskImportant">
+      Important
+    </label>
+    <label>
+      <input type="checkbox" id="taskCompleted">
+      Completed
+    </label>
+    <button type="submit">Add Task</button>
+  </form>
+  <div id="taskmanager"></div>
+  <!-- Make sure the JS file name matches exactly -->
+  <script src="combine_css_html.js"></script>
+</body>
+</html>
